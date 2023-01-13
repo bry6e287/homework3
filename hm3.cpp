@@ -2,7 +2,6 @@
 #include <vector>
 #include <fstream>
 #include <set>
-#include <list>
 int main(int argc, char *argv[]) {
     //передача имени файла с входными данными в кчестве аргумента командной строки
     std::string filename = argv[1];
@@ -36,7 +35,6 @@ int main(int argc, char *argv[]) {
     std::swap(set[2], set[3]);
     std::set<std::string> ans;
     std::string s;
-    //перебор вариантов
     for (int i = 0; i < number_of_clothes[0]; i++) {
         int c = std::stoi(set[0][i]);
         if (c > d) {
@@ -75,6 +73,7 @@ int main(int argc, char *argv[]) {
             }
         }
     }
+    //проверка на выполение условий и вывод ответа
     for (auto &an : ans) {
         if ((std::count(an.begin(), an.end(), 'R') == 1
             && std::count(an.begin(), an.end(), 'G') == 1
